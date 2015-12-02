@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="8">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RECORD"
+                    android:id="@+id/recording"
+                    android:onClick="recordVideo"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="PLAY"
+                    android:id="@+id/play"
+                    android:onClick="playVideo"
+                    android:layout_below="@+id/recording"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RERECORD"
+                    android:id="@+id/buttonReRecord"
+                    android:onClick="reRecord"
+                    android:layout_above="@+id/cutButton"
+                    android:layout_alignRight="@+id/cutButton"
+                    android:layout_alignEnd="@+id/cutButton"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CUT"
+                    android:id="@+id/cutButton"
+                    android:onClick="cutVideoBtn"
+                    android:layout_above="@+id/videoView"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="VIDEO LIST"
+                    android:id="@+id/button"
+                    android:onClick="executeListVideo"
+                    android:layout_below="@+id/button2"
+                    android:layout_alignRight="@+id/button2"
+                    android:layout_alignEnd="@+id/button2"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CONCAT"
+                    android:id="@+id/buttonConcat"
+                    android:onClick="concat"
+                    android:layout_alignTop="@+id/buttonReRecord"
+                    android:layout_alignRight="@+id/videoView"
+                    android:layout_alignEnd="@+id/videoView"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center">
+
+            <VideoView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/videoView"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_alignParentTop="false" />
+
+            <MediaController
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mediaController"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentTop="false" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>
