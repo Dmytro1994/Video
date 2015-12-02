@@ -16,7 +16,7 @@ import java.io.File;
 
 
 public class MainActivity extends FragmentActivity{
-
+//usslle
     public static final int MEDIA_TYPE_VIDEO = 2;
     public static final int CAPTURE_VIDEO_ACTIVITY_REQUEST_CODE = 200;
     public VideoView videoView;
